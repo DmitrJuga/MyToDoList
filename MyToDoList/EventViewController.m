@@ -56,12 +56,12 @@
     [self.datePicker setDate:date animated:YES];
 }
 
-
 // добавление напоминания (нотификации)
 - (void)addNewEvent {
     UILocalNotification * event = [[UILocalNotification alloc]init];
     
     event.fireDate = self.datePicker.date;
+    event.timeZone = [NSTimeZone defaultTimeZone];
     event.alertTitle = @"Напоминаю!";
     event.alertBody = self.textFieldName.text;
     event.soundName = UILocalNotificationDefaultSoundName;
