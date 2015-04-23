@@ -14,7 +14,7 @@
 
 // настройка вида ячейки для напоминания
 - (void)setupCellForEvent: (UILocalNotification *) event {
-    self.labelEventName.text = event.alertTitle;
+    self.labelEventName.text = event.alertBody;
     
     // визуализируем важность
     NSNumber * priority = [event.userInfo valueForKey:KEY_PRIORITY];

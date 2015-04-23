@@ -62,7 +62,8 @@
     UILocalNotification * event = [[UILocalNotification alloc]init];
     
     event.fireDate = self.datePicker.date;
-    event.alertTitle = self.textFieldName.text;
+    event.alertTitle = @"Напоминаю!";
+    event.alertBody = self.textFieldName.text;
     event.soundName = UILocalNotificationDefaultSoundName;
     event.applicationIconBadgeNumber = [UIApplication sharedApplication].applicationIconBadgeNumber + 1;
     

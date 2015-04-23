@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D8E933C1AE7D9400031D955 /* MyToDoList */ = {
+		1D8E933C1AE7D9400031D955 /* Напоминалки */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D8E93601AE7D9400031D955 /* Build configuration list for PBXNativeTarget "MyToDoList" */;
+			buildConfigurationList = 1D8E93601AE7D9400031D955 /* Build configuration list for PBXNativeTarget "Напоминалки" */;
 			buildPhases = (
 				1D8E93391AE7D9400031D955 /* Sources */,
 				1D8E933A1AE7D9400031D955 /* Frameworks */,
@@ -162,7 +162,7 @@
 			);
 			dependencies = (
 			);
-			name = MyToDoList;
+			name = "Напоминалки";
 			productName = MyToDoList;
 			productReference = 1D8E933D1AE7D9400031D955 /* MyToDoList.app */;
 			productType = "com.apple.product-type.application";
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1D8E93381AE7D9400031D955 /* Build configuration list for PBXProject "Напоминалки" */;
+			buildConfigurationList = 1D8E93381AE7D9400031D955 /* Build configuration list for PBXProject "MyToDoList" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -216,7 +216,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D8E933C1AE7D9400031D955 /* MyToDoList */,
+				1D8E933C1AE7D9400031D955 /* Напоминалки */,
 				1D8E93551AE7D9400031D955 /* MyToDoListTests */,
 			);
 		};
@@ -268,7 +268,7 @@
 /* Begin PBXTargetDependency section */
 		1D8E93581AE7D9400031D955 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D8E933C1AE7D9400031D955 /* MyToDoList */;
+			target = 1D8E933C1AE7D9400031D955 /* Напоминалки */;
 			targetProxy = 1D8E93571AE7D9400031D955 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -434,7 +434,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D8E93381AE7D9400031D955 /* Build configuration list for PBXProject "Напоминалки" */ = {
+		1D8E93381AE7D9400031D955 /* Build configuration list for PBXProject "MyToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D8E935E1AE7D9400031D955 /* Debug */,
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D8E93601AE7D9400031D955 /* Build configuration list for PBXNativeTarget "MyToDoList" */ = {
+		1D8E93601AE7D9400031D955 /* Build configuration list for PBXNativeTarget "Напоминалки" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D8E93611AE7D9400031D955 /* Debug */,

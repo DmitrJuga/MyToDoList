@@ -79,6 +79,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Напоминалки" id="3X7-Ly-Emv">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="nw9-Ps-fSV"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="cQT-EC-sKO">
+                            <connections>
+                                <action selector="btnRefreshPressed:" destination="vXZ-lx-hvc" id="reF-Y9-mS3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aYu-89-3Ew">
                             <connections>
                                 <action selector="btnAddPressed:" destination="vXZ-lx-hvc" id="MLN-hm-5dh"/>

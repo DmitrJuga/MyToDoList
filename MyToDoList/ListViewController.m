@@ -41,11 +41,16 @@
     });
 }
 
-// кнопка [+] - добавление нового напоминания
+// кнопка - добавление нового напоминания
 - (IBAction)btnAddPressed:(id)sender {
     EventViewController * eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
     eventVC.isNew = YES;
     [self.navigationController pushViewController:eventVC animated:YES];
+}
+
+// кнопка Refresh
+- (IBAction)btnRefreshPressed:(id)sender {
+    [self reloadEvents];
 }
 
 // отписываемся от внутренних нотификаций

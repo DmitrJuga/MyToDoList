@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EventViewController.h"
+#import "AppConstants.h"
 
 @interface AppDelegate ()
 
@@ -35,6 +36,8 @@
                                                          UIRemoteNotificationTypeSound)];
     }
     
+    application.applicationIconBadgeNumber = 0;
+    
     return YES;
 }
 
@@ -55,6 +58,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+//    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIF_RELOAD object:nil];
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
