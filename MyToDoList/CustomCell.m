@@ -6,14 +6,22 @@
 //  Copyright (c) 2015 Dmitriy Dolotenko. All rights reserved.
 //
 
-#import "CustomCell.h"
 #import "AppConstants.h"
+#import "CustomCell.h"
+
+@interface CustomCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *labelEventName;
+@property (weak, nonatomic) IBOutlet UILabel *labelEventDate;
+@property (weak, nonatomic) IBOutlet UILabel *labelEventPriority;
+
+@end
 
 
 @implementation CustomCell
 
 // настройка вида ячейки для напоминания
-- (void)setupCellForEvent: (UILocalNotification *) event {
+- (void)setupCellForEvent:(UILocalNotification *)event {
     self.labelEventName.text = event.alertBody;
     
     // визуализируем важность

@@ -10,10 +10,6 @@
 
 @interface CustomCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *labelEventName;
-@property (weak, nonatomic) IBOutlet UILabel *labelEventDate;
-@property (weak, nonatomic) IBOutlet UILabel *labelEventPriority;
-
 - (void)setupCellForEvent: (UILocalNotification *) event;
 
 @end

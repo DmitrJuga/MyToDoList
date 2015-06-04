@@ -6,9 +6,8 @@
 //  Copyright (c) 2015 Dmitriy Dolotenko. All rights reserved.
 //
 
-#import "EventViewController.h"
 #import "AppConstants.h"
-
+#import "EventViewController.h"
 
 @interface EventViewController ()
 
@@ -18,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSaveDelete;
 
 @end
+
 
 @implementation EventViewController
 
@@ -52,7 +52,7 @@
 }
 
 // анимированная установка даты
-- (void)setDate: (NSDate *) date {
+- (void)setDate:(NSDate *)date {
     [self.datePicker setDate:date animated:YES];
 }
 
@@ -120,7 +120,7 @@
 #pragma mark - UITextFieldDelegate
 
 // нажатие Return
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }

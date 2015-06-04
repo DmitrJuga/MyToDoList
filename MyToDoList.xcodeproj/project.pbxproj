@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D8E933D1AE7D9400031D955 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8E933D1AE7D9400031D955 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MyToDoList.app; path = "Напоминалки.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8E93411AE7D9400031D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8E93421AE7D9400031D955 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D8E93441AE7D9400031D955 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,10 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				1D8E936F1AE864500031D955 /* AppConstants.h */,
-				1D8E93661AE7DB280031D955 /* ListViewController */,
-				1D8E936A1AE7DB640031D955 /* EventViewController */,
 				1D8E93441AE7D9400031D955 /* AppDelegate.h */,
 				1D8E93451AE7D9400031D955 /* AppDelegate.m */,
+				1D8E93661AE7DB280031D955 /* ListViewController */,
+				1D8E936A1AE7DB640031D955 /* EventViewController */,
 				1D8E934A1AE7D9400031D955 /* Main.storyboard */,
 				1D8E934D1AE7D9400031D955 /* Images.xcassets */,
 				1D8E934F1AE7D9400031D955 /* LaunchScreen.xib */,

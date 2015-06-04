@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Dmitriy Dolotenko. All rights reserved.
 //
 
+#import "AppConstants.h"
 #import "ListViewController.h"
 #import "EventViewController.h"
 #import "CustomCell.h"
-#import "AppConstants.h"
 
 @interface ListViewController ()
 
@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSArray *arrayEvents;
 
 @end
+
 
 @implementation ListViewController
 
@@ -36,9 +37,9 @@
 
 // перезагрузка UI таблицы
 - (void)reloadUI {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    //dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-    });
+    //});
 }
 
 // кнопка - добавление нового напоминания
@@ -61,20 +62,20 @@
 
 #pragma mark: - UITableViewDataSource
 
-// кол-во строк в списке
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+// кол-во строк
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.arrayEvents.count;
 }
 
 // настройка вида ячейки
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomCell * cell = [tableView dequeueReusableCellWithIdentifier:EVENT_CELL_ID];
     [cell setupCellForEvent:[self.arrayEvents objectAtIndex:indexPath.row]];
     return cell;
 }
 
 // разрешаем удалять
--(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
@@ -91,12 +92,12 @@
 #pragma mark: - UITableViewDelegate
 
 // переход на просмотр напоминания
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     EventViewController * eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
     eventVC.isNew = NO;
     eventVC.event = [self.arrayEvents objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:eventVC animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
