@@ -10,6 +10,7 @@
 
 @interface ListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (void)reloadEvents;
 
 @end
 

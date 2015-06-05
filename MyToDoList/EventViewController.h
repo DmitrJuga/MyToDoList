@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EventViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface EventViewController : UITableViewController <UITextFieldDelegate>
 
-@property (assign, nonatomic) BOOL isNew;
 @property (strong, nonatomic) UILocalNotification *event;
+
+@property (assign, nonatomic) BOOL isFired;
 
 @end

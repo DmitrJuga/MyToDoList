@@ -18,45 +18,33 @@
 
 @end
 
-
 @implementation ListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc] init];
-    // подписываемся на внутренние нотификации
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadEvents) name:NOTIF_RELOAD object:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self reloadEvents];
 }
 
 // загрузка списка напоминаний
 - (void)reloadEvents {
     self.arrayEvents = [[UIApplication sharedApplication] scheduledLocalNotifications];
-    [self reloadUI];
-}
-
-// перезагрузка UI таблицы
-- (void)reloadUI {
-    //dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-    //});
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 // кнопка - добавление нового напоминания
 - (IBAction)btnAddPressed:(id)sender {
     EventViewController * eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
-    eventVC.isNew = YES;
     [self.navigationController pushViewController:eventVC animated:YES];
 }
 
 // кнопка Refresh
 - (IBAction)btnRefreshPressed:(id)sender {
     [self reloadEvents];
-}
-
-// отписываемся от внутренних нотификаций
-- (void) dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -94,7 +82,6 @@
 // переход на просмотр напоминания
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     EventViewController * eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
-    eventVC.isNew = NO;
     eventVC.event = [self.arrayEvents objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:eventVC animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

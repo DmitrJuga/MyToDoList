@@ -17,7 +17,6 @@
 
 @end
 
-
 @implementation CustomCell
 
 // настройка вида ячейки для напоминания
