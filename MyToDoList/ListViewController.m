@@ -38,7 +38,7 @@
 
 // кнопка - добавление нового напоминания
 - (IBAction)btnAddPressed:(id)sender {
-    EventViewController * eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
+    EventViewController *eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
     [self.navigationController pushViewController:eventVC animated:YES];
 }
 
@@ -57,8 +57,8 @@
 
 // настройка вида ячейки
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CustomCell * cell = [tableView dequeueReusableCellWithIdentifier:EVENT_CELL_ID];
-    [cell setupCellForEvent:[self.arrayEvents objectAtIndex:indexPath.row]];
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:EVENT_CELL_ID];
+    [cell setupCellForEvent:self.arrayEvents[indexPath.row]];
     return cell;
 }
 
@@ -70,7 +70,7 @@
 // удаление напоминания
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        UILocalNotification * event = [self.arrayEvents objectAtIndex:indexPath.row];
+        UILocalNotification *event = self.arrayEvents[indexPath.row];
         [[UIApplication sharedApplication] cancelLocalNotification:event];
         [self reloadEvents];
     }
@@ -81,8 +81,8 @@
 
 // переход на просмотр напоминания
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    EventViewController * eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
-    eventVC.event = [self.arrayEvents objectAtIndex:indexPath.row];
+    EventViewController *eventVC = [self.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
+    eventVC.event = self.arrayEvents[indexPath.row];
     [self.navigationController pushViewController:eventVC animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

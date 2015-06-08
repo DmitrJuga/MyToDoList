@@ -49,29 +49,30 @@
 // сообщаем о приходе нотификации
 - (void)showAlertForNotification:(UILocalNotification *)notification {
     if ([self.window.rootViewController.presentedViewController isKindOfClass:[UIAlertController class]]) {
-        // если уже отображается UIAlertController - повторим вызов себя через 5 сек.
+        // уже отображается UIAlertController - повторим вызов себя через 5 сек.
         [self performSelector:@selector(showAlertForNotification:) withObject:notification afterDelay:5];
-    } else {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:notification.alertTitle
-                                                                       message:notification.alertBody
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            // не открываем напоминание, просто обновляем список
-            UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
-            [(ListViewController *)navController.viewControllers[0] reloadEvents];
-        }]];
-        [alert addAction:[UIAlertAction actionWithTitle:@"Открыть" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            // открываем напоминание на просмотр
-            [self showEventForNotification:notification];
-        }]];
-        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        return;
     }
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:notification.alertTitle
+                                                                   message:notification.alertBody
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        // не открываем напоминание, просто обновляем список
+        UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+        [(ListViewController *)navController.viewControllers[0] reloadEvents];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Открыть" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // открываем напоминание на просмотр
+        [self showEventForNotification:notification];
+    }]];
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 // открываем напоминание на просмотр
 - (void)showEventForNotification:(UILocalNotification *)notification {
     UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
-    EventViewController * vc = [navController.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
+    EventViewController *vc = [navController.storyboard instantiateViewControllerWithIdentifier:EVENT_VC_ID];
     vc.event = notification;
     vc.isFired = YES;
     [navController pushViewController:vc animated:YES];

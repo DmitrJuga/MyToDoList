@@ -24,12 +24,12 @@
     self.labelEventName.text = event.alertBody;
     
     // визуализируем важность
-    NSNumber * priority = [event.userInfo valueForKey:KEY_PRIORITY];
-    NSArray * arrayPriorityStr = [NSArray arrayWithObjects:@"o", @"!", @"!!", @"!!!", nil];
-    self.labelEventPriority.text = [arrayPriorityStr objectAtIndex:priority.integerValue];
+    NSNumber *priority = [event.userInfo valueForKey:KEY_PRIORITY];
+    NSArray *arrayPriorityStr = @[ @"o", @"!", @"!!", @"!!!" ];
+    self.labelEventPriority.text = arrayPriorityStr[priority.integerValue];
     
     // форматируем дату
-    NSDateFormatter * formater = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
     formater.dateFormat = EVENT_DATE_FORMAT;
     self.labelEventDate.text = [formater stringFromDate:event.fireDate];
 }

@@ -129,9 +129,9 @@
     self.event.alertBody = self.textFieldName.text;
     self.event.soundName = UILocalNotificationDefaultSoundName;
     self.event.applicationIconBadgeNumber = 1; //[UIApplication sharedApplication].applicationIconBadgeNumber + 1;
-    NSNumber *priority = [NSNumber numberWithInteger:self.segmentPriority.selectedSegmentIndex];
-    NSDictionary * userInfo = [NSDictionary dictionaryWithObjectsAndKeys:priority, KEY_PRIORITY,
-                               self.textViewNotes.text, KEY_NOTES, nil];
+    NSNumber *priority = @(self.segmentPriority.selectedSegmentIndex);
+    NSDictionary * userInfo = @{ KEY_PRIORITY: priority,
+                               KEY_NOTES: self.textViewNotes.text };
     self.event.userInfo = userInfo;
     [[UIApplication sharedApplication] scheduleLocalNotification:self.event];
     return YES;
