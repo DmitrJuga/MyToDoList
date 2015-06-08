@@ -13,20 +13,9 @@
 		1D8E934C1AE7D9400031D955 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E934A1AE7D9400031D955 /* Main.storyboard */; };
 		1D8E934E1AE7D9400031D955 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E934D1AE7D9400031D955 /* Images.xcassets */; };
 		1D8E93511AE7D9400031D955 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E934F1AE7D9400031D955 /* LaunchScreen.xib */; };
-		1D8E935D1AE7D9400031D955 /* MyToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E935C1AE7D9400031D955 /* MyToDoListTests.m */; };
 		1D8E93691AE7DB610031D955 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E93681AE7DB610031D955 /* EventViewController.m */; };
 		1D8E936D1AE817020031D955 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E936C1AE817020031D955 /* CustomCell.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1D8E93571AE7D9400031D955 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D8E93351AE7D9400031D955 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D8E933C1AE7D9400031D955;
-			remoteInfo = MyToDoList;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D8E933D1AE7D9400031D955 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MyToDoList.app; path = "Напоминалки.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +28,6 @@
 		1D8E934B1AE7D9400031D955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D8E934D1AE7D9400031D955 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D8E93501AE7D9400031D955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1D8E93561AE7D9400031D955 /* MyToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8E935B1AE7D9400031D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8E935C1AE7D9400031D955 /* MyToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyToDoListTests.m; sourceTree = "<group>"; };
 		1D8E93671AE7DB610031D955 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
@@ -51,13 +39,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1D8E933A1AE7D9400031D955 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D8E93531AE7D9400031D955 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				1D8E933D1AE7D9400031D955 /* MyToDoList.app */,
-				1D8E93561AE7D9400031D955 /* MyToDoListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,24 +147,6 @@
 			productReference = 1D8E933D1AE7D9400031D955 /* MyToDoList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D8E93551AE7D9400031D955 /* MyToDoListTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D8E93631AE7D9400031D955 /* Build configuration list for PBXNativeTarget "MyToDoListTests" */;
-			buildPhases = (
-				1D8E93521AE7D9400031D955 /* Sources */,
-				1D8E93531AE7D9400031D955 /* Frameworks */,
-				1D8E93541AE7D9400031D955 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1D8E93581AE7D9400031D955 /* PBXTargetDependency */,
-			);
-			name = MyToDoListTests;
-			productName = MyToDoListTests;
-			productReference = 1D8E93561AE7D9400031D955 /* MyToDoListTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,10 +158,6 @@
 				TargetAttributes = {
 					1D8E933C1AE7D9400031D955 = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					1D8E93551AE7D9400031D955 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 1D8E933C1AE7D9400031D955;
 					};
 				};
 			};
@@ -217,7 +175,6 @@
 			projectRoot = "";
 			targets = (
 				1D8E933C1AE7D9400031D955 /* Напоминалки */,
-				1D8E93551AE7D9400031D955 /* MyToDoListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,13 +187,6 @@
 				1D8E934C1AE7D9400031D955 /* Main.storyboard in Resources */,
 				1D8E93511AE7D9400031D955 /* LaunchScreen.xib in Resources */,
 				1D8E934E1AE7D9400031D955 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D8E93541AE7D9400031D955 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,23 +205,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D8E93521AE7D9400031D955 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D8E935D1AE7D9400031D955 /* MyToDoListTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1D8E93581AE7D9400031D955 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D8E933C1AE7D9400031D955 /* Напоминалки */;
-			targetProxy = 1D8E93571AE7D9400031D955 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1D8E934A1AE7D9400031D955 /* Main.storyboard */ = {
@@ -397,40 +331,6 @@
 			};
 			name = Release;
 		};
-		1D8E93641AE7D9400031D955 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MyToDoListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyToDoList.app/MyToDoList";
-			};
-			name = Debug;
-		};
-		1D8E93651AE7D9400031D955 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MyToDoListTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyToDoList.app/MyToDoList";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,15 +348,6 @@
 			buildConfigurations = (
 				1D8E93611AE7D9400031D955 /* Debug */,
 				1D8E93621AE7D9400031D955 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1D8E93631AE7D9400031D955 /* Build configuration list for PBXNativeTarget "MyToDoListTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D8E93641AE7D9400031D955 /* Debug */,
-				1D8E93651AE7D9400031D955 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
