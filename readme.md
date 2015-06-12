@@ -1,4 +1,4 @@
-# ![MyContacts](https://github.com/DmitrJuga/MyToDoList/blob/master/MyToDoList/Images.xcassets/AppIcon.appiconset/mzl.hrtieshw-29@2x.png)  Напоминалки / MyToDoList
+# ![](https://github.com/DmitrJuga/MyToDoList/blob/master/MyToDoList/Images.xcassets/AppIcon.appiconset/mzl.hrtieshw-29@2x.png)  Напоминалки / MyToDoList
 
 **"Напоминалки"** - простой список задач (to-do list) с напоминаниями. Учебный (тренировочный) проект на **Objective-C** c использованием **локальных нотификаций**.
 
@@ -25,7 +25,7 @@
 - Auto Layout (Storyboard constraints);   
 
 **Extra:**
-- AppIcon (image from open web sources);
+- AppIcon (image from free web source).
 
 ## More Screenshots
 
