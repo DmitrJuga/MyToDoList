@@ -14,18 +14,18 @@
 - При получении уведомления можно открыть соответствующее напомнинание для просмортра деталей, при необходимости - отредактировать его (например, задать новые дату и время) и сохранить повторно.
 - *При первом запуске запрашивается разрешение на отправку приложением уведомлений.*
 
-## Technical Information
+## Technical Details
 
 **UIKit framework usage:**
 - `UILocalNotifications`: creating/scheduling/canceling/**handling**;
-- `AppDelegate` methods `application:didFinishLaunchingWithOptions:` and `application:didReceiveLocalNotification:` with custom code for handling **notifications**;
-- `UIViewController` + `UITableView` with custom cells for event list;
-- `UITableViewController` with static cells for event details;
-- `UITextField`, `UITextView`, `UIDatePicker`, `UISegmentedControl`, `UIButton`, `UIAlertController`;
-- Auto Layout (Storyboard constraints);   
+- `AppDelegate` methods `application:didFinishLaunchingWithOptions:` and `application:didReceiveLocalNotification:` with custom code for handling **notifications**.
+- `UIViewController` + `UITableView` with custom cells for event list.
+- `UITableViewController` with static cells for event details.
+- `UITextField`, `UITextView`, `UIDatePicker`, `UISegmentedControl`, `UIButton`, `UIAlertController`.
+- Auto Layout (Storyboard constraints).
 
 **Extra:**
-- AppIcon (image from free web source).
+- App Icon (image from free web source).
 
 ## More Screenshots
 
@@ -38,7 +38,7 @@
 
 ## Основа проекта
 
-Проект создан на основе моей домашней работы к уроку 8 по курсу **"Objective C. Уровень 1"** в [НОЧУ ДО «Школа программирования» (http://geekbrains.ru)](http://geekbrains.ru/) и доработан после окончания курса **"Objective C. Уровень 2"**. Домашнее задание и пояснения к выполненой работе - см. в [homework_readme.md](https://github.com/DmitrJuga/MyToDoList/blob/master/homework_readme.md).
+Проект создан на основе моей домашней работы к уроку 8 по курсу **"Objective C. Уровень 1"** в НОЧУ ДО «Школа программирования» ([http://geekbrains.ru](http://geekbrains.ru/users/38648)) и доработан после окончания курса **"Objective C. Уровень 2"**. Домашнее задание и пояснения к выполненой работе - см. в [homework_readme.md](https://github.com/DmitrJuga/MyToDoList/blob/master/homework_readme.md).
 
 ---
 
