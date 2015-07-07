@@ -98,22 +98,22 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:ALERT_TITLE
                                                                        message:msg
                                                                 preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"ОК" style:UIAlertActionStyleCancel handler:nil]];
-        [self presentViewController:alert animated:YES completion:^{
+        [alert addAction:[UIAlertAction actionWithTitle:@"ОК" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             [self.textFieldName becomeFirstResponder];
-        }];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
         return NO;
     } else if ([self.datePicker.date compare:[NSDate date]] == NSOrderedAscending) {
         NSString *msg = @"Дата и время напоминания должны быть больше текущей!";
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:ALERT_TITLE
                                                                        message:msg
                                                                 preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"ОК" style:UIAlertActionStyleCancel handler:nil]];
-        [self presentViewController:alert animated:YES completion:^{
+        [alert addAction:[UIAlertAction actionWithTitle:@"ОК" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             NSDate * date = [NSDate date];
             [self.datePicker setDate:date animated:YES];
             self.datePicker.minimumDate = date;
-        }];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
         return NO;
     }
 
@@ -196,9 +196,10 @@
 // высота ячеек
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 4) {
-        return (self.event) ? tableView.frame.size.height - 474 : 0;
+        CGFloat height = tableView.frame.size.height < 532 ? 54 : tableView.frame.size.height - 474;
+        return (self.event) ? height : 0;
     }
-    NSArray *cellHeights = @[ @64, @38, @112, @188 ];
+    NSArray *cellHeights = @[ @68, @38, @116, @192 ];
     return [cellHeights[indexPath.row] floatValue];
 }
 

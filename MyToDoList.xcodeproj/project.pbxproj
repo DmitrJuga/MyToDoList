@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D8E933D1AE7D9400031D955 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MyToDoList.app; path = "Напоминалки.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8E933D1AE7D9400031D955 /* Напоминалки.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Напоминалки.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8E93411AE7D9400031D955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8E93421AE7D9400031D955 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D8E93441AE7D9400031D955 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		1D8E933E1AE7D9400031D955 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D8E933D1AE7D9400031D955 /* MyToDoList.app */,
+				1D8E933D1AE7D9400031D955 /* Напоминалки.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			);
 			name = "Напоминалки";
 			productName = MyToDoList;
-			productReference = 1D8E933D1AE7D9400031D955 /* MyToDoList.app */;
+			productReference = 1D8E933D1AE7D9400031D955 /* Напоминалки.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -158,6 +158,7 @@
 				TargetAttributes = {
 					1D8E933C1AE7D9400031D955 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 8PXVK96LC5;
 					};
 				};
 			};
@@ -311,10 +312,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyToDoList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -323,10 +327,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyToDoList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
